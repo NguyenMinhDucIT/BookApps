@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="45dp"
+        android:layout_height="45dp"></ImageView>
+
+    <TextView
+        android:id="@+id/txtvName"
+        android:gravity="left"
+        android:layout_marginLeft="40dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:text="Tên danh mục"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+</LinearLayout>
