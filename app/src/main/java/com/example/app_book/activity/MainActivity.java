@@ -1,5 +1,6 @@
 package com.example.app_book.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
@@ -11,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -30,6 +33,7 @@ import com.example.app_book.R;
 import com.example.app_book.adapter.CategoryAdapter;
 import com.example.app_book.adapter.ProductAdapter;
 import com.example.app_book.connect.CheckConnection;
+import com.example.app_book.model.Cart;
 import com.example.app_book.model.Category;
 import com.example.app_book.model.Product;
 import com.example.app_book.server.StringUtil;
@@ -61,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
     ProductAdapter productAdapter;
     List<Product> productList;
 
+    // mảng cart
+    public static List<Cart> cartList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +85,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_bar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent = new Intent(MainActivity.this, CartActivity.class);
+        startActivity(intent);
+        return super.onOptionsItemSelected(item);
+    }
+
+    // Đổi thứ tự row database
     private void CatchOnItemListView() {
         lvCategory.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -188,11 +209,11 @@ public class MainActivity extends AppCompatActivity {
     // sửa slide ở đây
     private void initViewFlipper() {
         sliderList = new ArrayList<>();
-        sliderList.add("https://24hstore.vn/upload_images/images/2019/07/24/BANNER-KT-02.jpg");
-        sliderList.add("https://ap24h.vn/upload_images/images/2019/09/05/web-ap24h-khaitruong-hadong.png");
-        sliderList.add("https://cdn.shortpixel.ai/client/q_lossless,ret_img,w_1024/https://hakivn.com/wp-content/uploads/2018/12/Banner-Poster-01-1024x576.png");
-        sliderList.add("https://cdn.shopify.com/s/files/1/0944/0000/articles/gaming-computers-toronto_1600x.jpg?v=1588771453");
-        sliderList.add("https://techzones.vn/Data/Sites/1/News/1901/techzones-msi-x-venom-qua-tang-sieu-pham-phong-cach-venom.png");
+        sliderList.add("https://i0.wp.com/pointwhiskeypublishing.com/wp-content/uploads/2017/12/point-whiskey-books-banner.jpg?ssl=1");
+        sliderList.add("https://previews.123rf.com/images/leoedition/leoedition1708/leoedition170800386/84002428-read-the-books-banner-design.jpg");
+        sliderList.add("https://laurasbooksandblogs.com/wp-content/uploads/2019/12/Top-10-Books-2019-Banner.png");
+        sliderList.add("https://www.slashfilm.com/wp/wp-content/images/scarystories-banner.jpg");
+        sliderList.add("https://images.template.net/wp-content/uploads/2016/10/19142344/Sci-fic-book-cover-design.jpg");
         ImageView imageView;
         for (int i = 0; i < sliderList.size(); i++) {
             // gán imageView với màn hình
@@ -229,5 +250,12 @@ public class MainActivity extends AppCompatActivity {
         rvLastestProduct = findViewById(R.id.rvLastestProduct);
         navigationView = findViewById(R.id.navigationView);
         lvCategory = findViewById(R.id.lvCategory);
+
+        // kt người dùng có đưa dữ liệu vào trong mảng hay không
+        if(cartList != null){
+
+        }else{
+            cartList = new ArrayList<>();
+        }
     }
 }

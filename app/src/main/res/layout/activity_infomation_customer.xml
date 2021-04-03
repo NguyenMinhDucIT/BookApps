@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="500dp"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="Thông tin thanh toán"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtvErrName"
+            android:textColor="#F44336"
+            android:textStyle="italic"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:text="* Nhập tên người mua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:textColorHint="#D0D0D0"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:background="#FAFAFA"
+            android:hint="Tên người mua"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtvErrPhone"
+            android:textColor="#F44336"
+            android:textStyle="italic"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:text="* Nhập số điện thoại"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:inputType="phone"
+            android:textColorHint="#D0D0D0"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:background="#FAFAFA"
+            android:hint="Số điện thoại"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtvErrEmail"
+            android:textColor="#F44336"
+            android:textStyle="italic"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:text="* Nhập email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <EditText
+            android:id="@+id/edtEMail"
+            android:textColorHint="#D0D0D0"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:background="#FAFAFA"
+            android:hint="Email"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnOK"
+            android:backgroundTint="#91D4F3"
+            android:layout_weight="1"
+            android:text="Xác nhận"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"></Button>
+
+        <Button
+            android:id="@+id/btnCannel"
+            android:backgroundTint="#91D4F3"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="Trở về"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"></Button>
+
+    </LinearLayout>
+
+</LinearLayout>

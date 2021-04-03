@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/cart"
+        android:id="@+id/mnuCart"
+        android:title="Giỏ hàng"></item>
+
+<!--    <item android:title="Search item"-->
+<!--        android:id="@+id/menusearch"-->
+<!--        android:icon="@drawable/search"-->
+<!--        app:showAsAction="ifRoom|collapseActionView"-->
+<!--        app:actionViewClass="androidx.appcompat.widget.SearchView"/>-->
+
+
+</menu>

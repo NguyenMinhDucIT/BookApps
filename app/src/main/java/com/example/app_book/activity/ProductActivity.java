@@ -29,7 +29,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductActivity extends AppCompatActivity {
+public class    ProductActivity extends AppCompatActivity {
 
     private ProductByCategoryIdAdapter productByCategoryIdAdapter;
     private List<Product> productList;
